@@ -17,6 +17,7 @@
 	<br>
 	<input type="submit" class="btn btn-primary" name="login" value="Log in">
 	</form>
+	
 </div>
 <div class="container  col-sm-4 col-sm-offset-2" >
 <h1> Register Form</h1>
