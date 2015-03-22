@@ -2,9 +2,9 @@
 //For Update
 if(isset($_POST['upd']))
 {
-include "connection.php";
+include "db_config.php";
 
-$upd="UPDATE `student` SET `std_name`='".$_POST['snam']."',`address`='".$_POST['add']."',`contact_no`='".$_POST['cnn']."',`age`='".$_POST['ag1']."' WHERE `std_id`='".$_POST['idddddd']."'";
+$upd="UPDATE `users` SET `username`='".$_POST['username']."',`email`='".$_POST['email']."',`gender`='".$_POST['gender']."',`password`='".$_POST['password']."' WHERE `user_id`='".$_POST['user_id']."'";
 mysql_query($upd) or die(mysql_error());
 echo '<script language="javascript">document.location.href="details.php"</script>';
 
@@ -17,15 +17,15 @@ echo '<script language="javascript">document.location.href="details.php"</script
 //The following Code only Show the selected records in the form,
 if(isset($_GET['edit_id']))
 {
-include "connection.php";
-$sel="SELECT * FROM `student` where `std_id`='".$_GET['edit_id']."'";
+include "db_config.php";
+$sel="SELECT * FROM `users` where `user_id`='".$_GET['edit_id']."'";
 $sel9=mysql_query($sel) or die(mysql_error());
 
 $row=mysql_fetch_array($sel9);
 ?>
 
 <form name="frmEdit" method="post" action="edit.php">
-<input type="hidden" name="idddddd" value="<?php echo $_GET['edit_id'];?>">
+<input type="hidden" name="user_id" value="<?php echo $_GET['edit_id'];?>">
 <table align="center" width="29%" border="1">
 
 <tr>
@@ -33,25 +33,30 @@ $row=mysql_fetch_array($sel9);
 </tr>
 
 <tr>
-<td width="29%">Student's Name </td>
-<td><input  type="text" name="snam" value="<?php echo $row['std_name'];?>"></td>
+<td width="29%"> Name </td>
+<td><input  type="text" name="username" value="<?php echo $row['username'];?>"></td>
 
 </tr>
 
 <tr>
-<td>Address</td>
-<td><input name="add" type="text" id="add" value="<?php echo $row['address'];?>"></td>
+<td>Email</td>
+<td><input name="email" type="text" id="email" value="<?php echo $row['email'];?>"></td>
 
 </tr>
 
 <tr>
-<td>Contact No </td>
-<td><input name="cnn" type="text" id="cnn" value="<?php echo $row['contact_no'];?>"></td>
-
+<td>Gender</td>
+<td>
+<select  name="gender" >
+	   <option value="M">Male</option>
+	   <option value="F">Female</option>
+	   <option value="O">Other</option>
+	 </select>
+</td>
 </tr>
 <tr>
-<td>Age</td>
-<td><input type="text" name="ag1" value="<?php echo $row['age'];?>"></td>
+<td>password</td>
+<td><input type="text" name="password" value="<?php echo $row['password'];?>"></td>
 </tr>
 <tr>
 <td colspan="2" align="center"><input type="submit" name="upd" value="Update"></td>

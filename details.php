@@ -16,6 +16,7 @@ include "db_config.php";
 <th>UserName</th>
 <th>Gender</th>
 <th>Email</th>
+
 <th colspan="2" align="center">Edit Records</th>
 </tr>
 <?php
@@ -30,6 +31,7 @@ while($row=mysql_fetch_array($SEL4))
 <td><?php echo $row['username'];?></td>
 <td><?php echo $row['gender'];?></td>
 <td><?php echo $row['email'];?></td>
+
 
 <td><a href="edit.php?edit_id=<?php echo $row['user_id'];?>">Edit</a></td>
 <td><a href="delete.php?del=<?php echo $row['user_id'];?>">Delete</a></td>
