@@ -1,0 +1,69 @@
+﻿Setting up xampp
+Setting of XAMPP
+http://devendradora.blogspot.in/2015/02/setting-up-xampp.html
+problems in installation of XAMPP
+http://devendradora.blogspot.in/2015/02/problems-in-installation-of-xampp.html
+
+
+Version control System (git)
+http://git-scm.com/downloads
+git config --global user.name "Devendra Dora"
+git config --global user.email "dev.tech24@gmail.com"
+
+
+use git with proxy server
+git config --global http.proxy http://172.30.0.16:3128
+git config --global https.proxy https://172.30.0.16:3128
+
+
+If you decide at any time to reset this proxy and work without (no proxy):
+Commands to use:
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+
+
+
+Server and client side Technologies
+Talk on
+Server Side : APACHE , IIS , TOMCAT, PHP , node.js , python ,SQL, NOSQL
+Client side  : HTML . JS , CSS
+Frameworks
+
+
+
+
+
+
+
+
+Create a database and PHP project
+MYSQL
+Database : college
+
+
+Tables :
+1. users  :   user_id, username,email,password,gender
+2.  user_data :  user_id,branch,phonenum, address etc
+
+
+write sql queries for creating above database.
+CREATE
+SELECT , INSERT ,DELETE ,UPDATE
+ALTER
+JOIN
+
+why primary key , foreign key ?
+
+PHP
+* Talk on Basics of php
+               syntax , echo ,arrays, if ,while , for, foreach ,var dump ,print_r, json_encode,      json_decode , date
+
+
+* Project college (Make students use git)
+index.php :  Register button  , Login button
+details.php: Display all details by joining tables 
+db_config.php :  Database connections
+
+
+* Talk on security

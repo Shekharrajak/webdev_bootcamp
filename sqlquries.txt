@@ -1,0 +1,6 @@
+INSERT INTO `college`.`users` (`user_id`, `username`, `password`, `email`, `gender`) VALUES (NULL, 'dev', 'dev', 'dev@dev.com', 'male');
+
+
+SELECT * FROM `users` 
+
+
